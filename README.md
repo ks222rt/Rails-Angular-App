@@ -118,16 +118,3 @@ När man fått sin auth-token så kan man använda sig av CRUD funktionerna. I e
 * Och plocka API-nyckeln som finns där och kopiera den  
 * Och klistra in den i app_route.js i client mappen  
 
-
-## Till exeminator  
-
-Första delen var en registreringsapplikation där en användare kan skapa ett konto och få ut en eller flera api-nycklar. Finns även tillgång för en admin att logga in och plocka bort användare som inte sköter sig.  
-
-I andra delen skapades ett restAPI som hanterar events med taggningar. Kallar det events då det egentligen kan vara precis vad som helst som en användare vill skapa och i mitt fall blev det pubar i clienten. Apiet kan skapa/ändra och ta bort events och lägga till taggar på eventsen, man kan även ta bort taggar från befintliga events. Via anrop kan man få ut ett event eller flera events, men även events som har en särskild tagg. Via en sökquery kan man söka pubar efter städare eller longitud/latitude, men även på en "creators" events. 
-
-I tredje och sista delen skapade jag en client som listar pubar jag har besökt och tyckt skall finnas med på clienten. Startsidan visar alla pubar i en lista och på en karta, trycker man på en pub får man upp information om den. Man kan sortera efter ordning (desc/asc), sortera pubar efter taggar och även söka på städer. Som inloggad användare kan man skapa en ny pub, med eller utan taggar, och du kan ändra eller ta bort befintliga pubar. 
-
-Kursen har varit väldigt rolig och givade, dock väldigt krävande. Det har varit mycket att lära sig och göra i varje labb och med tanke på att webprojekt 1 kördes samtidigt och tog mycket tid fick man lägga en hel del kvällar för att få ihop allt, men i slutändan var det roligt att göra labbarna och man har lärt sig mycket. Dock har jag inte i de två första delarna gjort någon extra funktionell del utan har gjort det som krävs för godkänt.  
-I den tredje uppgiften implementerade jag så att man kan skapa taggar i samband med när användaren skapar en händelse och även när man uppdaterar en händelse kan man lägga till flera taggar.  
-
-Tycker Rails och angular har varit riktigt roligt att lära mig och kommer testa det mer i framtiden.  
