@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <%= link_to "Create APIkey", new_apikey_path, class: "btn btn-default navbar-btn" %>
+    <%= link_to "Log out", logout_path, class: "btn btn-default navbar-btn"  %>
+    <p class="navbar-text navbar-right">Signed in, handle your keys with respect</p>
+  </div>
+</nav>
+
+<table class="table table-hover">
+  <tr>
+    <td><strong>Device</strong></td>
+    <td><strong>Key</strong></td>
+    <td><strong>Action</strong></td>
+  </tr>
+  <% @user.apikeys.each do | apikeys | %>
+      <tr>
+        <td><%= apikeys.device %></td>
+        <td><%= apikeys.key %></td>
+        <td><%= link_to "Delete key", apikey_path(apikeys.id), method: :delete, data: { confirm: "Are you sure you want to remove this APIkey?" }%></td>
+      </tr>
+  <% end %>
+</table>

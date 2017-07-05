@@ -1,0 +1,39 @@
+<% if @user.errors.any? %>
+    <div class="alert alert-danger">
+      <h2>Something went wrong with the registration</h2>
+
+      <ul>
+        <% @user.errors.full_messages.each do |msg|%>
+          <li><%= msg%></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+<div class="center jumbotron">
+  <h1>Awesome API</h1>
+  <h2>Register</h2>
+</div>
+
+<%= link_to "Back", root_path, class: "btn btn-info btn-sm" %>
+
+<div id="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @user do | f |%>
+
+        <p><%= f.label :username %></p>
+        <p><%= f.text_field :username, class: "form-control", placeholder: "Username" %></p>
+
+        <p><%= f.label :email %></p>
+        <p><%= f.email_field :email, class: "form-control", placeholder: "Email" %></p>
+
+        <p><%= f.label :password %></p>
+        <p><%= f.password_field :password, class: "form-control", placeholder: "Password" %></p>
+
+        <p><%= f.label :password_confirmation %></p>
+        <p><%= f.password_field :password_confirmation, class: "form-control", placeholder: "Password confirmation" %></p>
+
+        <p><%= f.submit "Register", class: "btn btn-primary" %></p>
+    <% end %>
+  </div>
+</div>

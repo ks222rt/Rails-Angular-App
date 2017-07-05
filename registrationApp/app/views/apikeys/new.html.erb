@@ -1,0 +1,30 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <%= link_to "Go back", apikeys_path, class: "btn btn-default navbar-btn"%>
+    <p class="navbar-text navbar-right">Create an APIkey</p>
+  </div>
+</nav>
+
+
+<% if @apikey.errors.any? %>
+    <div id="alert alert-danger">
+      <h2>Something went wrong with the registration</h2>
+
+      <ul>
+        <% @apikey.errors.full_messages.each do |msg|%>
+            <li><%= msg%></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for @apikey do | f |%>
+        <p><%= f.label :device_name  %></p>
+        <p><%= f.text_field :device, class: "form-control", placeholder: "Device name" %></p>
+
+        <p><%= f.submit "Create", class: "btn btn-primary" %></p>
+    <% end %>
+  </div>
+</div>

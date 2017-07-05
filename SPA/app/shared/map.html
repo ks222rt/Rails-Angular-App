@@ -1,0 +1,20 @@
+<div class="google-map-canvas" ng-controller="MapController as vm">
+    <ng-map default-style="true" center="56.878999, 14.837036" zoom="6" id="map">
+        <marker ng-repeat="event in vm.event" id='{{event.id}}'
+            position="{{event.latitude}}, {{event.longitude}}"
+            on-click="vm.showDetail(event, {{event}})"
+            title='{{event.name}}'></marker>
+
+        <info-window id="map-iw" position="{{vm.oneEvent.latitude}}, {{vm.oneEvent.longitude}}">
+            <div ng-non-bindable="">
+              <strong>Name:</strong> {{vm.oneEvent.name}}<br/>
+              <strong>Address:</strong> {{vm.oneEvent.address}}<br/>
+              <strong>City:</strong> {{vm.oneEvent.city}}<br/>
+              <strong>Tags:</strong>
+              <ul>
+                  <li ng-repeat="tag in vm.oneEvent.tags">{{tag.name}}</li>
+              </ul>
+            </div>
+        </info-window>
+    </ng-map>
+</div>

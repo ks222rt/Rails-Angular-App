@@ -1,0 +1,19 @@
+<div class="center jumbotron">
+    <h1>Awesome API</h1>
+  <h2>Sign In</h2>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  <%= form_for(:session, method: "post") do |f| %>
+    <%= f.label :username  %>
+    <%= f.text_field :username , class: "form-control", placeholder: "Username" %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+
+    <%= f.submit "Log In", class: "btn btn-primary" %>
+    <%= link_to "Register", users_new_path, class: "btn btn-primary" %>
+  <% end %>
+  </div>
+</div>

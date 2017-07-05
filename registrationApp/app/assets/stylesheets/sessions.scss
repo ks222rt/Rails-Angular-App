@@ -1,0 +1,45 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+html {
+  overflow-y: scroll;
+  widht: 100%;
+}
+
+body {
+  padding-top: 60px;
+  font-size: 1.6em;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+.row {
+  width: 100%;
+}
+
+.form-control{
+  width: 50%;
+  margin-bottom: 1%;
+}
+
+.col-md-6 col-md-offset-3{
+  margin-left: 35%;
+}

@@ -1,0 +1,36 @@
+html{
+    width: 100%
+}
+
+body{
+    margin: auto;
+    width: 80%
+}
+
+/*#google-map{
+    margin-top: 5%;
+    height: 50%;
+}*/
+
+#title{
+    font-size: 22px;
+}
+
+#searchBar{
+    margin-bottom: 2%;
+}
+
+#form-login{
+    width: 140%;
+    float: right;
+    margin-top: 5%;
+}
+
+.panel-group{
+    width: 75%;
+    font-size: 12px;
+}
+
+.panel-group h4{
+    font-size: 14px;
+}
